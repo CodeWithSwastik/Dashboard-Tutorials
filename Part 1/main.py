@@ -1,16 +1,16 @@
-from flask import Flask, render_template, request, session
-from oauth import Oauth
+from quart import Quart, render_template, request, session
+from .oauth import Oauth
 
 
-app = Flask(__name__)
+app = Quart(__name__)
 app.config["SECRET_KEY"] = "test123"
 
 @app.route("/")
-def home():
-	return render_template("index.html",discord_url= Oauth.discord_login_url)
+async def home():
+	return await render_template("index.html",discord_url= Oauth.discord_login_url)
 
 @app.route("/login")
-def login():
+async def login():
 	code = request.args.get("code")
 
 	at = Oauth.get_access_token(code)
