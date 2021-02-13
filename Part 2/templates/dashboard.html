@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+</head>
+<body>
+<h1>Coding Bot Dashboard!</h1>
+
+<h2> The Bot is in: {{guild_count}} servers </h2>
+
+<h3> Common guilds </h3>
+
+<ul>
+{% for guild in matching %}
+  <li>{{ guild.name }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
