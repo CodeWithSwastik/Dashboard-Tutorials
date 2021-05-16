@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands, ipc
 
-TOKEN = "NzI2NjU1OTQ4MzAyODQzOTM0.XvgdFg.YNStyTyxMHgFw50zGsvk3S98Ot8"
+TOKEN = ""
 
 class MyBot(commands.Bot):
 
