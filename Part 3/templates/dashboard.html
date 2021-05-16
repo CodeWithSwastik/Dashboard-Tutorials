@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="static/index.css" />
+  </head>
+  <body>
+    <h1>Coding Bot Dashboard!</h1>
+
+    <h2>The Bot is in: {{guild_count}} servers</h2>
+    <div class="picker">
+      <h3>Hello, {{username}}! Please select a server to get started</h3>
+      <hr />
+      <section class="cards">
+        {% for guild in guilds %}
+        <div class="card">
+          <a href="/dashboard/{{guild.id}}">
+            {% if guild.icon_url is not none %}
+            <img src="{{guild.icon_url}}" class="{{guild.class_color}}" />
+            {% else %}
+            <img
+              src="https://discordapp.com/assets/322c936a8c8be1b803cd94861bdfa868.png"
+              class="{{guild.class_color}}"
+            />
+            {% endif %}
+          </a>
+          <br />
+          {{ guild.name }}
+        </div>
+        {% endfor %}
+      </section>
+    </div>
+  </body>
+</html>

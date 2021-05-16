@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="static/index.css" />
+    <style>
+      button {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 12px;
+      }
+      button:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Coding Bot!</h1>
+    <p align="center">
+      {% if not authorized %}
+      <a href="/login"><button>Login with discord</button></a>
+      {% else %}
+      <a href="/dashboard"><button>Open Dashboard</button></a>
+      {%endif %}
+    </p>
+  </body>
+</html>

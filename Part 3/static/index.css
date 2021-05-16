@@ -1,0 +1,57 @@
+body {
+  background-image: url("bg.png");
+  background-size: 40%;
+  color: #fff;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.picker {
+  margin: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #23272a;
+  border-radius: 3px;
+}
+
+.picker h3 {
+  text-align: center;
+  padding-top: 2%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  justify-items: center;
+}
+
+.card {
+  margin: 0.5em;
+  display: grid;
+  grid-template-rows: 1fr 0.2fr;
+  justify-items: center;
+}
+
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: scale(1.1);
+}
+
+.card img {
+  border-radius: 50%;
+  width: 7em;
+  height: 7em;
+}
+
+.green-border {
+  border: 4px solid rgb(106, 255, 170);
+}
+
+.red-border {
+  border: 4px solid rgb(255, 103, 90);
+}
